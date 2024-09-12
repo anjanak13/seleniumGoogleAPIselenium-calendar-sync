@@ -1,9 +1,18 @@
-apply plugin: 'java'
-apply plugin: 'application'
+plugins {
+    id 'java'
+    id 'application'
+}
 
-mainClassName = 'CalendarQuickstart'
-sourceCompatibility = 11
-targetCompatibility = 11
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(16)
+    }
+}
+
+application {
+    mainClass = 'CalendarQuickstart'
+}
+
 version = '1.0'
 
 repositories {
