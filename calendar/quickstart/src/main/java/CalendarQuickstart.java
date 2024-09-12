@@ -13,6 +13,7 @@ import com.google.api.services.calendar.Calendar;
 import com.google.api.services.calendar.CalendarScopes;
 import com.google.api.services.calendar.model.Event;
 import com.google.api.services.calendar.model.EventDateTime;
+import com.google.api.services.calendar.model.Events; // Import the Events class
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -77,5 +78,27 @@ public class CalendarQuickstart {
     String calendarId = "primary";
     event = service.events().insert(calendarId, event).execute();
     System.out.printf("Event created: %s\n", event.getHtmlLink());
+
+    // List the next 10 events from the primary calendar
+    DateTime now = new DateTime(System.currentTimeMillis());
+    Events events = service.events().list("primary")
+        .setMaxResults(10)
+        .setTimeMin(now)
+        .setOrderBy("startTime")
+        .setSingleEvents(true)
+        .execute();
+    List<Event> items = events.getItems();
+    if (items.isEmpty()) {
+      System.out.println("No upcoming events found.");
+    } else {
+      System.out.println("\nUpcoming events:");
+      for (Event evt : items) {
+        DateTime startTime = evt.getStart().getDateTime();
+        if (startTime == null) {
+          startTime = evt.getStart().getDate();
+        }
+        System.out.printf("%s (%s)\n", evt.getSummary(), startTime);
+      }
+    }
   }
 }
