@@ -29,7 +29,7 @@ dependencies {
     implementation 'com.google.apis:google-api-services-calendar:v3-rev20220715-2.0.0'
 
     //SLF4J and a binding
-    implementation 'org.slf4j:slf4j-api:2.0.0'
+    implementation 'org.slf4j:slf4j-api:2.0.16'
     implementation 'org.slf4j:slf4j-simple:2.0.0'
 }
 
