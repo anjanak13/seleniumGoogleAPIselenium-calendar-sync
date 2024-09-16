@@ -1,1 +1,0 @@
-Additional samples can be found at https://github.com/googleapis/google-cloud-java/tree/main/java-meet/google-cloud-meet

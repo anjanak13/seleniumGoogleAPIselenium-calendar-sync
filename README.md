@@ -1,59 +1,46 @@
-# Google Workspace Java Samples
+# Selenium with Google Calendar API 🚀
 
-A collection of samples that demonstrate how to call Google Workspace APIs in Java.
+This project demonstrates how to integrate Selenium with Google Calendar API in Java. It is extended for personal use to automate the process of logging into a web portal to acquire upcoming shifts and creating Google Calendar events based on the scraped shift information.
 
-## APIs
+## Features
 
-### Admin SDK
+- Log in to the QSS web portal to acquire upcoming shifts.
+- Scrape information about the shifts and create Google Calendar events using Google APIs.
 
-- [Alert Center Quickstart](https://developers.google.com/admin-sdk/alertcenter/quickstart/java)
-- [Directory Quickstart](https://developers.google.com/admin-sdk/directory/v1/quickstart/java)
-- [Reports Quickstart](https://developers.google.com/admin-sdk/reports/v1/quickstart/java)
-- [Reseller Quickstart](https://developers.google.com/admin-sdk/reseller/v1/quickstart/java)
+## Installation
 
-### Apps Script
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/your-repository.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd your-repository
+    ```
+3. Install the required dependencies. You can use Maven or Gradle:
+    ```bash
+    mvn install
+    ```
+    or
+    ```bash
+    gradle build
+    ```
 
-- [Quickstart](https://developers.google.com/apps-script/api/quickstart/java)
+4. Add your `credentials.json` file to the root directory. You can obtain this file from the Google Developers Console.
 
-### Calendar
+5. Configure your `config.properties` file with the necessary details like the website URL, username, and password.
 
-- [Quickstart](https://developers.google.com/calendar/quickstart/java)
-- [Sync Tokens and Etags](calendar/sync)
-- [Command-line sample](https://github.com/google/google-api-java-client-samples/tree/master/calendar-cmdline-sample)
+## Usage
 
-### Classroom
+To run the project, execute the main class:
+```bash
+java -cp target/your-project.jar com.yourpackage.CalendarQuickstart
+```
 
-- [Quickstart](https://developers.google.com/classroom/quickstart/java)
+or
 
-### Docs
-
-- [Quickstart](https://developers.google.com/docs/api/quickstart/java)
-
-### Drive V3
-
-- [Quickstart](https://developers.google.com/drive/v3/web/quickstart/java)
-- [Command-line sample](https://github.com/google/google-api-java-client-samples/tree/master/drive-cmdline-sample)
-
-### Gmail
-
-- [Quickstart](https://developers.google.com/gmail/api/quickstart/java)
-
-### People
-
-- [Quickstart](https://developers.google.com/people/quickstart/java)
-
-### Sheets
-
-- [Quickstart](https://developers.google.com/sheets/api/quickstart/java)
-
-### Slides
-
-- [Quickstart](https://developers.google.com/slides/quickstart/java)
-
-### Tasks
-
-- [Quickstart](https://developers.google.com/google-apps/tasks/quickstart/java)
-
-### Vault
-
-- [Quickstart](https://developers.google.com/vault/quickstart/java)
+```bash
+gradle clean
+gradle build
+gradle run
+```
