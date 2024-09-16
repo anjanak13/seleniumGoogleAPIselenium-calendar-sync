@@ -44,3 +44,17 @@ gradle clean
 gradle build
 gradle run
 ```
+
+## References
+
+- [Google Calendar API Quickstart](https://developers.google.com/calendar/quickstart/java)
+- [Sync Tokens and Etags](calendar/sync)
+- [Command-line Sample](https://github.com/google/google-api-java-client-samples/tree/master/calendar-cmdline-sample)
+
+## Contributing
+
+Feel free to fork the repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
