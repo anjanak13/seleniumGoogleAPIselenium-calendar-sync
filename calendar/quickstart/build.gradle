@@ -21,7 +21,7 @@ repositories {
 
 dependencies {
     // Selenium dependencies
-    implementation 'org.seleniumhq.selenium:selenium-java:4.20.0' // Adjust version as needed
+    implementation 'org.seleniumhq.selenium:selenium-java:4.25.0' // Adjust version as needed
 
     // Google Calendar API dependencies
     implementation 'com.google.api-client:google-api-client:2.0.0'
